@@ -1,0 +1,263 @@
+/* -----------------------------
+   colors used
+   -----------------------------
+    #000000
+    #020203
+    #4d84c4
+    #a51c30
+    #f5f5f8
+    #ebebeb
+    #ffffff
+    
+    You can see the color palette (minus the white and black) at: 
+    https://coolors.co/a51c30-4d84c4-020203-ebebeb-f5f5f8
+*/
+
+/* -----------------------------
+   fonts used
+   -----------------------------
+Note that Roboto and "Roboto Condensed" are available from the linked fonts already in the HTML
+
+font-family stack for most things:
+    Roboto, Arial, sans-serif;
+
+font-family stack for 'condensed' elements, such as hX headings, header navigation, and links in the 'Explore'  section:
+    'Roboto Condensed', Arial, sans-serif;
+   -----------------------------  */
+
+/* -----------------------------
+   background images used
+   -----------------------------
+../images/hes_shield_wordmark.svg   - This is the HES Shield and HES Wordmark
+../images/campus_bridge_river.jpg   - This is the background image for the 
+                                      "Explore" section
+../images/arrow-right.svg    - This is the crimson arrow next to the 
+                                      hypertext links in the "Explore" sections
+../images/mortar-board.svg          - The "cap" in Student Success stories 'program'
+../images/map-marker.svg            - The map marker in Student Success 
+                                      stories 'hometown'
+
+   -----------------------------  */
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* turn off sections you aren't working on so you can focus!
+   I suggest you begin with working on the "footer"
+*/
+/* consider uncommenting this to start so that only the footer is visible! */
+/*
+div.explore,
+div.studentsuccess,
+header
+{
+    display: none;
+}
+*/
+
+/* -----------------------------
+   Styles for footer
+   ----------------------------- */
+
+/* ----------------------------- */
+footer{
+   background-color: black;
+   color: white;
+   padding: 10px;
+   width: 87%;
+   margin: auto;
+}
+
+footer nav ul{
+   list-style: none;
+   display: inline-flex;
+   padding-left: 0px;
+}
+footer nav ul li a{
+   color: white;
+   text-decoration: none;
+   margin-right: 20px;
+}
+
+.contactplus{
+   font-weight: bold;
+}
+
+.privacyplus ul li a{
+   border-right: 1px solid white;
+   padding-right: 20px;
+}
+.privacyplus ul li:nth-of-type(4) a{
+   border-right: none; 
+}
+/* -----------------------------
+   Styles for header
+   ----------------------------- */
+
+/* ----------------------------- */
+header{
+   width: 85%;
+   margin: auto;
+}
+header #title{
+   background-color: #a51c30;
+   color: white;
+   padding: 10px;
+   font-family:  'Roboto Condensed', Arial, sans-serif;
+   text-transform: uppercase;
+}
+.navbar{
+   display: flex;
+}
+/* -----------------------------
+   Styles for header primary nav
+   ----------------------------- */
+
+/* ----------------------------- */
+
+
+/* -----------------------------
+   Styles for header primary nav
+   ----------------------------- */
+
+/* ----------------------------- */
+.primary ul{
+   list-style: none;
+   display: inline-flex;
+}
+.primary ul li a{
+   color: black;
+   text-decoration: none;
+   margin-right: 20px;
+   font-weight: bold;
+   padding-right: 20px;
+   border-right: 1px solid black;
+}
+.primary ul .getinfo a {
+   background-color: #a51c30;
+   color: white;
+   padding: 10px;
+   border-right: none;
+}
+
+/* -----------------------------
+   Styles for header secondary nav
+   ----------------------------- */
+
+/* ----------------------------- */
+.secondary ul{
+   list-style: none;
+   display: inline-flex;
+}
+.secondary ul li a{
+   color: #4D84C4;
+   text-decoration: none;
+   margin-right: 20px;
+   font-weight: bold;
+   padding-right: 20px;
+}
+.login a {
+   color: #4D84C4;
+   border: 1px solid #4D84C4;
+   padding: 10px;
+}
+
+/* -----------------------------
+   Styles for "Explore"
+   ----------------------------- */
+
+/* ----------------------------- */
+.explore{
+   background-image: url("../images/campus_bridge_river.jpg");
+   background-size: cover;
+   height: 550px;
+   width: 88%;
+   margin: auto;
+}
+
+.explore h1{
+   color: white;
+   text-align: center;
+   font-size: 3.5em;
+   padding-top: 20px;
+   text-shadow: 3px 3px rgb(92, 90, 90);
+}
+.sections{
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+   grid-gap: 30px;
+   padding: 20px;
+}
+.sections section{
+   background-color: #EBEBEB;
+   border-top: 5px solid #a51c30;
+}
+.sections section h2{
+   background-color: #f5f5f8;
+   margin: 0;
+   padding: 10px;
+   text-transform: uppercase;
+}
+.sections section ul{
+   list-style: none;
+   padding-left: 10px;
+}
+.sections section ul li {
+   margin-bottom: 5px;
+}
+.sections section ul li a{
+   text-decoration: none;
+   color: #a51c30;
+   font-weight: bold;
+   font-family: 'Roboto Condensed', Arial, sans-serif;
+   background-image: url("../images/arrow-right.svg");
+   background-repeat: no-repeat;
+   background-position: right;
+   padding-right: 20px;
+}
+/* -----------------------------
+   Styles for "Student Success"
+   ----------------------------- */
+
+/* ----------------------------- */
+
+.studentsuccess {
+   text-align: center;
+   background-color: #EBEBEB;
+   padding: 20px;
+   width: 85%;
+   margin: auto;
+}
+
+.articles{
+   display: flex;
+   justify-content: space-between;
+}
+
+.articles article{
+   background-color: white;
+   width: 30%;
+   text-align: left;
+   padding: 10px;
+}
+.articles article img{
+   width: 100%;
+}
+.articles article ul{
+   list-style: none;
+}
+.articles article ul li:nth-of-type(1){
+   background-image: url("../images/mortar-board.svg");
+   background-repeat: no-repeat;
+   padding-left: 30px;
+   
+}
+.articles article ul li:nth-of-type(2){
+   background-image: url("../images/map-marker.svg");
+   background-repeat: no-repeat;
+   padding-left: 30px;
+   
+}
